@@ -229,5 +229,10 @@ class: editor
 
 <script>
   var Range = require("ace/range").Range;
+  
+  // Make sure the user doesn't lose their work by accident
+  window.onbeforeunload = function(e) {
+    return 'Are you sure you want to leave?';
+  };
 </script>
 
